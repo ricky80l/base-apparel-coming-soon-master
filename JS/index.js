@@ -1,5 +1,5 @@
 // CHANGE PICTURE MOBILE/DESKTOP
-
+alert("prova");
 $(window).resize(function() {
     $(document).ready(image_change($(window).width()));
 })
