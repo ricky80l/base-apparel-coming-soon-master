@@ -1,18 +1,17 @@
 // CHANGE PICTURE MOBILE/DESKTOP
-alert("prova");
+
 $(window).resize(function() {
     $(document).ready(image_change($(window).width()));
-})
+});
 
 function image_change(width) {
     var finestra = width;
-    console.log(finestra);
     if (finestra < 1064) {
         $(".image").attr("src", "images/hero-mobile.jpg");
     } else {
         $(".image").attr("src", "images/hero-desktop.jpg");
     }
-}
+};
 
 var include = false;
 var chiocciola = "";
@@ -27,19 +26,14 @@ $(".submit").click(function() {
         $(".submit").removeClass("clicked");
     }, 200);
     check();
-})
+});
 
 
 function check() {
     verEmail();
     orderCheck();
     verSpace();
-    console.log("Include " + include);
-    console.log("ordered " + ordered);
-    console.log("space " + space);
-    console.log();
     if (($(".email").val() != "") && (include == true) && (ordered == true) && (space == false)) {
-
         $(".result").text("Thank you Sir!");
         reset();
     } else {
@@ -65,7 +59,7 @@ function orderCheck() {
     } else {
         ordered = false;
     }
-}
+};
 
 
 function verSpace() {
@@ -74,7 +68,7 @@ function verSpace() {
     } else {
         space = false;
     }
-}
+};
 
 
 function reset() {
@@ -87,4 +81,4 @@ function reset() {
     chiocciola = "";
     ordered = false;
     space = true;
-}
+};
