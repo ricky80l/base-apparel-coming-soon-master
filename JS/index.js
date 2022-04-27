@@ -2,7 +2,7 @@
 
 $(window).resize(function() {
     $(document).ready(image_change($(window).width()));
-});
+})
 
 function image_change(width) {
     var finestra = width;
@@ -12,7 +12,7 @@ function image_change(width) {
     } else {
         $(".image").attr("src", "images/hero-desktop.jpg");
     }
-};
+}
 
 var include = false;
 var chiocciola = "";
@@ -27,7 +27,7 @@ $(".submit").click(function() {
         $(".submit").removeClass("clicked");
     }, 200);
     check();
-});
+})
 
 
 function check() {
@@ -65,7 +65,7 @@ function orderCheck() {
     } else {
         ordered = false;
     }
-};
+}
 
 
 function verSpace() {
@@ -74,7 +74,7 @@ function verSpace() {
     } else {
         space = false;
     }
-};
+}
 
 
 function reset() {
@@ -87,4 +87,4 @@ function reset() {
     chiocciola = "";
     ordered = false;
     space = true;
-};
+}
