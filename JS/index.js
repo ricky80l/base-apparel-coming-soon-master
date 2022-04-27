@@ -1,5 +1,9 @@
 // CHANGE PICTURE MOBILE/DESKTOP
-alert("prova");
+
+var include = false;
+var chiocciola = "";
+var ordered = false;
+var space = true;
 
 
 $(window).resize(function() {
@@ -15,10 +19,6 @@ function image_change(width) {
     }
 }
 
-var include = false;
-var chiocciola = "";
-var ordered = false;
-var space = true;
 
 // CHECK FUNCTIONS
 
