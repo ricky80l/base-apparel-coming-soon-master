@@ -1,5 +1,5 @@
 // CHANGE PICTURE MOBILE/DESKTOP
-alert("prova")
+alert("prova");
 
 
 $(window).resize(function() {
@@ -13,74 +13,74 @@ function image_change(width) {
     } else {
         $(".image").attr("src", "images/hero-desktop.jpg");
     }
-};
+}
 
 var include = false;
 var chiocciola = "";
 var ordered = false;
 var space = true;
 
-// // CHECK FUNCTIONS
+// CHECK FUNCTIONS
 
-// $(".submit").click(function() {
-//     $(".submit").addClass("clicked");
-//     setTimeout(function() {
-//         $(".submit").removeClass("clicked");
-//     }, 200);
-//     check();
-// });
-
-
-// function check() {
-//     verEmail();
-//     orderCheck();
-//     verSpace();
-//     if (($(".email").val() != "") && (include == true) && (ordered == true) && (space == false)) {
-//         $(".result").text("Thank you Sir!");
-//         reset();
-//     } else {
-//         $(".result").text("Please provide a valid email");
-//         $(".error").addClass("visible");
-//         $(".email").addClass("red");
-//         reset();
-//     }
-// }
-
-// function verEmail() {
-//     chiocciola = $(".email").val();
-//     if (chiocciola.includes("@") && chiocciola.includes(".")) {
-//         include = true;
-//     } else {
-//         include = false;
-//     }
-// }
-
-// function orderCheck() {
-//     if (chiocciola.indexOf("@") < chiocciola.indexOf(".")) {
-//         ordered = true;
-//     } else {
-//         ordered = false;
-//     }
-// };
+$(".submit").click(function() {
+    $(".submit").addClass("clicked");
+    setTimeout(function() {
+        $(".submit").removeClass("clicked");
+    }, 200);
+    check();
+});
 
 
-// function verSpace() {
-//     if (chiocciola.includes(" ")) {
-//         space = true;
-//     } else {
-//         space = false;
-//     }
-// };
+function check() {
+    verEmail();
+    orderCheck();
+    verSpace();
+    if (($(".email").val() != "") && (include == true) && (ordered == true) && (space == false)) {
+        $(".result").text("Thank you Sir!");
+        reset();
+    } else {
+        $(".result").text("Please provide a valid email");
+        $(".error").addClass("visible");
+        $(".email").addClass("red");
+        reset();
+    }
+}
+
+function verEmail() {
+    chiocciola = $(".email").val();
+    if (chiocciola.includes("@") && chiocciola.includes(".")) {
+        include = true;
+    } else {
+        include = false;
+    }
+}
+
+function orderCheck() {
+    if (chiocciola.indexOf("@") < chiocciola.indexOf(".")) {
+        ordered = true;
+    } else {
+        ordered = false;
+    }
+}
 
 
-// function reset() {
-//     setTimeout(function() {
-//         $(".result").text("");
-//         $(".error").removeClass("visible");
-//         $(".email").removeClass("red");
-//     }, 2000);
-//     include = false;
-//     chiocciola = "";
-//     ordered = false;
-//     space = true;
-// };
+function verSpace() {
+    if (chiocciola.includes(" ")) {
+        space = true;
+    } else {
+        space = false;
+    }
+}
+
+
+function reset() {
+    setTimeout(function() {
+        $(".result").text("");
+        $(".error").removeClass("visible");
+        $(".email").removeClass("red");
+    }, 2000);
+    include = false;
+    chiocciola = "";
+    ordered = false;
+    space = true;
+}
