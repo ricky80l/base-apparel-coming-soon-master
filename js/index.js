@@ -39,7 +39,7 @@ function check() {
         $(".result").text("Thank you Sir!");
         setTimeout(function() {
         window.location.reload();
-        },2000)
+        },2000);
         reset();
     } else {
         $(".result").text("Please provide a valid email");
