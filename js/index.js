@@ -37,6 +37,9 @@ function check() {
     verSpace();
     if (($(".email").val() != "") && (include == true) && (ordered == true) && (space == false)) {
         $(".result").text("Thank you Sir!");
+        setTimeout(function() {
+        window.location.reload();
+        },2000)
         reset();
     } else {
         $(".result").text("Please provide a valid email");
